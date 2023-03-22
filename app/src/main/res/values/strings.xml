@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SeasonCook</string>
+    <string name="btnEntree">Entrées</string>
+    <string name="btnPlat">Plats</string>
+    <string name="btnDessert">Desserts</string>
+    <string name="btnPref">Gérer mes préférences</string>
 </resources>

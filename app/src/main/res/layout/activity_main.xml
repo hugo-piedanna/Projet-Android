@@ -4,47 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/greenBackground"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnPref"
         android:layout_width="286dp"
         android:layout_height="59dp"
+        android:layout_marginBottom="152dp"
         android:text="@string/btnPref"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="444dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button5"
+    <ImageButton
+        android:id="@+id/btnDesserts"
         android:layout_width="286dp"
         android:layout_height="59dp"
         android:layout_marginBottom="48dp"
         android:text="@string/btnDessert"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        android:background="@drawable/dessert"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/btnPref"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button4"
+    <ImageButton
+        android:id="@+id/btnEntree"
         android:layout_width="286dp"
         android:layout_height="59dp"
         android:layout_marginBottom="48dp"
         android:text="@string/btnEntree"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        android:background="@drawable/entree"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlats"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957" />
 
-    <Button
-        android:id="@+id/button3"
+    <ImageButton
+        android:id="@+id/btnPlats"
         android:layout_width="286dp"
         android:layout_height="59dp"
         android:layout_marginBottom="48dp"
         android:text="@string/btnPlat"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        android:background="@drawable/plat"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/btnDesserts"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent" />

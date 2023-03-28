@@ -23,9 +23,9 @@
         android:layout_width="286dp"
         android:layout_height="59dp"
         android:layout_marginBottom="48dp"
-        android:text="@string/btnDessert"
         android:background="@drawable/dessert"
         android:scaleType="fitXY"
+        android:text="@string/btnDessert"
         app:layout_constraintBottom_toTopOf="@+id/btnPref"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -36,9 +36,9 @@
         android:layout_width="286dp"
         android:layout_height="59dp"
         android:layout_marginBottom="48dp"
-        android:text="@string/btnEntree"
         android:background="@drawable/entree"
         android:scaleType="fitXY"
+        android:text="@string/btnEntree"
         app:layout_constraintBottom_toTopOf="@+id/btnPlats"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -51,11 +51,46 @@
         android:layout_width="286dp"
         android:layout_height="59dp"
         android:layout_marginBottom="48dp"
-        android:text="@string/btnPlat"
         android:background="@drawable/plat"
         android:scaleType="fitXY"
+        android:text="@string/btnPlat"
         app:layout_constraintBottom_toTopOf="@+id/btnDesserts"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnEntree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonPrintemps"
+            android:layout_width="113dp"
+            android:layout_height="wrap_content"
+            android:text="@string/radioPrintemps" />
+
+        <RadioButton
+            android:id="@+id/radioButtonEte"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:text="@string/radioEte" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAutomne"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:text="@string/radioAutomne" />
+
+        <RadioButton
+            android:id="@+id/radioButtonHiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioHiver" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

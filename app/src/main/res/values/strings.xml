@@ -6,4 +6,8 @@
     <string name="btnPref">Gérer mes préférences</string>
     <string name="menu">Menu</string>
     <string name="retour">Retour</string>
+    <string name="radioPrintemps">Printemps</string>
+    <string name="radioEte">Été</string>
+    <string name="radioAutomne">Automne</string>
+    <string name="radioHiver">Hiver</string>
 </resources>

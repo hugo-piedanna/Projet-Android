@@ -60,6 +60,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
+        android:id="@+id/choose_season"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

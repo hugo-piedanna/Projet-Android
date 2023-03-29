@@ -2,12 +2,15 @@ package com.projet.seasoncook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.projet.seasoncook.database.DatabaseHelper;
 import com.projet.seasoncook.models.CookType;
@@ -26,6 +29,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private List<Recette> recettes;
+    private String params;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +38,45 @@ public class MainActivity extends AppCompatActivity {
 
         this.recettes = new ArrayList<>();
         initRecette();
+        setParams();
 
+        RadioGroup rGroup = (RadioGroup)findViewById(R.id.choose_season);
+        rGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+                String season = "";
+                for(Seasons s : Seasons.values()){
+                    if(s.getId() == checkedId){
+                        season = s.name();
+                    }
+                }
+
+                Log.v("[MainActivity]", season);
+                
+                ContentValues value = new ContentValues();
+                value.put("season", season);
+                db.update("settings", value, " id = 1", null);
+
+                db.close();
+            }
+        });
+
+    }
+
+    public void setParams(){
+        DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        Cursor cursor = db.query("settings", new String[] {"season"}, "", new String[] {}, null, null, null);
+        if(cursor.moveToFirst()){
+            this.params = cursor.getString(cursor.getColumnIndexOrThrow("season"));
+            ((RadioButton)findViewById(Seasons.valueOf(this.params).getId())).setChecked(true);
+        }
+        Log.v("[Param]", this.params);
+        db.close();
     }
 
     @Override
@@ -44,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public void initRecette(){
+    private void initRecette(){
         Map<Integer, Ingredient> ingredients = new HashMap<Integer, Ingredient>();
         ingredients.put(1, new Ingredient("pâte sablée", IngredientUnity.Aucune));
         ingredients.put(2, new Ingredient("rhubarbe", IngredientUnity.Gramme));

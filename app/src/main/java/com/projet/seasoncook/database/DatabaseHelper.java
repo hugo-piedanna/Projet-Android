@@ -9,7 +9,7 @@ import com.projet.seasoncook.models.Seasons;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "SeasonCook.db";
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 7;
 
     private String createTable = "CREATE TABLE settings(id INTEGER PRIMARY KEY, season TEXT);";
     private String insertInitParam = "INSERT INTO settings VALUES (1, '"+ Seasons.Spring.name() +"');";

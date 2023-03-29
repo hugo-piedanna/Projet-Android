@@ -53,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
                         season = s.name();
                     }
                 }
-
-                Log.v("[MainActivity]", season);
                 
                 ContentValues value = new ContentValues();
                 value.put("season", season);
@@ -75,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
             this.params = cursor.getString(cursor.getColumnIndexOrThrow("season"));
             ((RadioButton)findViewById(Seasons.valueOf(this.params).getId())).setChecked(true);
         }
-        Log.v("[Param]", this.params);
         db.close();
     }
 

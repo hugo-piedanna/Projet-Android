@@ -1,4 +1,4 @@
-package com.projet.seasoncook;
+package com.projet.seasoncook.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,25 +11,13 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.projet.seasoncook.R;
 import com.projet.seasoncook.database.DatabaseHelper;
 import com.projet.seasoncook.models.CookType;
-import com.projet.seasoncook.models.Etape;
-import com.projet.seasoncook.models.Ingredient;
-import com.projet.seasoncook.models.IngredientUnity;
-import com.projet.seasoncook.models.Recette;
 import com.projet.seasoncook.models.Seasons;
-
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 

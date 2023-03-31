@@ -1,4 +1,4 @@
-package com.projet.seasoncook;
+package com.projet.seasoncook.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,17 +7,18 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
+import com.projet.seasoncook.R;
 import com.projet.seasoncook.controllers.Cooks;
 import com.projet.seasoncook.models.CookType;
 import com.projet.seasoncook.models.ListAdapter;
+import com.projet.seasoncook.models.Recette;
 import com.projet.seasoncook.models.Seasons;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.util.stream.Collectors;
 
 public class chooseCook extends AppCompatActivity {
 
@@ -33,6 +34,17 @@ public class chooseCook extends AppCompatActivity {
         ListAdapter adapter = new ListAdapter(Cooks.getInstance().cooksFilter(seasons, type), getApplicationContext());
 
         list.setAdapter(adapter);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Recette recette = (Recette) adapterView.getItemAtPosition(position);
+
+                Intent intent = new Intent(chooseCook.this, Cook.class);
+                intent.putExtra("cook", recette);
+                startActivity(intent);
+
+            }
+        });
     }
 
     @Override
@@ -50,6 +62,7 @@ public class chooseCook extends AppCompatActivity {
             finish();
         }else if(item.getItemId() == R.id.back){
             super.onBackPressed();
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

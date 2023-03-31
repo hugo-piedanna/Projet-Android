@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Recette {
+public class Recette implements Serializable{
 
     private final List<Etape> steps;
     private final String title;

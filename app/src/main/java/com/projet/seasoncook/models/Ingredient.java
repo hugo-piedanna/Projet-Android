@@ -1,6 +1,8 @@
 package com.projet.seasoncook.models;
 
-public class Ingredient {
+import java.io.Serializable;
+
+public class Ingredient implements Serializable {
 
     private final String name;
     private final IngredientUnity unity;

@@ -3,11 +3,11 @@
     <item
         android:id="@+id/home"
         android:title="@string/home"
-        app:showAsAction="always" />
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/back"
         android:icon="@android:drawable/ic_menu_revert"
         android:title="@string/retour"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 </menu>

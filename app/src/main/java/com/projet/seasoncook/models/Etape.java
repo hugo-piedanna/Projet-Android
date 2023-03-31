@@ -1,6 +1,8 @@
 package com.projet.seasoncook.models;
 
-public class Etape {
+import java.io.Serializable;
+
+public class Etape implements Serializable {
 
     private int number;
     private String description;

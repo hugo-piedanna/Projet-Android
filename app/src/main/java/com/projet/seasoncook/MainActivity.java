@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, chooseCook.class);
-                Log.v("[MainActivity]", params.name());
                 intent.putExtra("season", params.name());
                 intent.putExtra("cooktype", CookType.starter.name());
                 startActivity(intent);
@@ -114,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+        inflater.inflate(R.menu.menu_acceuil, menu);
         return true;
     }
 

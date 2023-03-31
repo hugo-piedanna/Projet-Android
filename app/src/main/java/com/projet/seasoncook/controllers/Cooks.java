@@ -1,5 +1,7 @@
 package com.projet.seasoncook.controllers;
 
+import static java.util.stream.Collectors.toCollection;
+
 import com.projet.seasoncook.models.CookType;
 import com.projet.seasoncook.models.Etape;
 import com.projet.seasoncook.models.Ingredient;
@@ -9,6 +11,7 @@ import com.projet.seasoncook.models.Seasons;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,8 +40,12 @@ public class Cooks {
         return recettes;
     }
 
+    public List<Ingredient> getIngredientsFiltre(CharSequence filtre){
+        return getIngredients().stream().filter((e) -> e.getName().contains(filtre)).collect(Collectors.toList());
+    }
+
     public List<Ingredient> getIngredients(){
-        return (List<Ingredient>) ingredients.values();
+        return new ArrayList<>(new ArrayList<>(this.ingredients.values())).stream().sorted(Comparator.comparing(Ingredient::getName)).collect(Collectors.toList());
     }
 
     public List<Recette> cooksFilter(Seasons seasons, CookType type){

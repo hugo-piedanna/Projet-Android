@@ -44,30 +44,32 @@ public class Cook extends AppCompatActivity {
         icon.setImageDrawable(getResources().getDrawable(res));
 
         GridLayout grid = (GridLayout) findViewById(R.id.ingList);
-        ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.setMarginStart(40);
         for(Map.Entry<Ingredient, Integer> ing : recette.getIngredients().entrySet()){
             TextView text = new TextView(this);
             text.setText(ing.getKey().getName() + ": " + ing.getValue() + " " + ing.getKey().getUnity().getSymbole());
-            text.setLayoutParams(params);
+            text.setTextSize(18f);
 
-            grid.addView(text);
+            GridLayout.Spec colspan = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
+            GridLayout.Spec rowSpan = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
+            GridLayout.LayoutParams gridParam = new GridLayout.LayoutParams(rowSpan, colspan);
+            grid.addView(text, gridParam);
         }
 
         LinearLayout steps = (LinearLayout) findViewById(R.id.stepList);
-        params = new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         for(Etape step : recette.getSteps()){
             TextView titleStep = new TextView(this);
             titleStep.setText("Etape " + step.getNumber());
             titleStep.setTextSize(20f);
             titleStep.setTypeface(Typeface.DEFAULT_BOLD);
-            params.setMargins(20, 20, 20, 0);
+            params.setMargins(0, 20, 0, 0);
             titleStep.setLayoutParams(params);
             steps.addView(titleStep);
 
             TextView stepDesc = new TextView(this);
             stepDesc.setText(step.getDescription());
-            params.setMargins(20, 0, 20, 20);
+            params.setMargins(0, 0, 0, 20);
+            stepDesc.setTextSize(18f);
             stepDesc.setLayoutParams(params);
             steps.addView(stepDesc);
         }

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public enum IngredientUnity implements Serializable {
 
-    Gramme("g"), Aucune(""), Gousse("gousse"), Cuillere_cafe("cuillère à café"), Pincee("pincée"), Tranche("tranche"), CentiLitre("cl"), Cuillere_soupe("cuillère à soupe"), Quartier("quartier"), Brins("brins");
+    Gramme("g"), Aucune(""), Gousse("gousse"), Cuillere_cafe("c.à.c"), Pincee("pincée"), Tranche("tranche"), CentiLitre("cl"), Cuillere_soupe("c.à.s"), Quartier("quartier"), Brins("brins");
 
     private String symbole;
     IngredientUnity(String symbole){

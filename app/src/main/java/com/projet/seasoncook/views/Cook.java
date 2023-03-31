@@ -44,6 +44,7 @@ public class Cook extends AppCompatActivity {
         icon.setImageDrawable(getResources().getDrawable(res));
 
         GridLayout grid = (GridLayout) findViewById(R.id.ingList);
+        grid.setRowCount(grid.getColumnCount() == 1 ? recette.getIngredients().size() : recette.getIngredients().size()/2);
         for(Map.Entry<Ingredient, Integer> ing : recette.getIngredients().entrySet()){
             TextView text = new TextView(this);
             text.setText(ing.getKey().getName() + ": " + ing.getValue() + " " + ing.getKey().getUnity().getSymbole());

@@ -72,11 +72,11 @@ public class ListAdapterIngredients extends BaseAdapter {
                 if(b){
                     //Check
                     db.execSQL("INSERT INTO allergy VALUES ('" + list.get(i).getName() + "');");
-                    Toast.makeText(context, "Nouvelle allergie sauvegardée", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, context.getText(R.string.addAllergy), Toast.LENGTH_LONG).show();
                 }else{
                     //Not check
                     db.execSQL("DELETE FROM allergy WHERE name = '" + list.get(i).getName() +"';");
-                    Toast.makeText(context, "Allergie supprimée", Toast.LENGTH_LONG).show();
+                    Toast.makeText(context, context.getText(R.string.removeAllergy), Toast.LENGTH_LONG).show();
                 }
                 db.close();
             }

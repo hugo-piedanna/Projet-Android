@@ -62,16 +62,25 @@
                 app:layout_constraintTop_toBottomOf="@id/timePrep"/>
 
             <TextView
+                android:id="@+id/portion"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/timeCook"/>
+
+            <TextView
                 android:id="@+id/titleIngredients"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ingrédients"
+                android:text="@string/ingrTitle"
                 android:layout_marginStart="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/timeCook"/>
+                app:layout_constraintTop_toBottomOf="@id/portion"/>
 
             <GridLayout
                 android:id="@+id/ingList"

@@ -36,8 +36,9 @@ public class Cook extends AppCompatActivity {
         Recette recette = (Recette) getIntent().getSerializableExtra("cook");
 
         ((TextView) findViewById(R.id.titleCook)).setText(recette.getTitle());
-        ((TextView) findViewById(R.id.timePrep)).setText("Préparation: " + recette.getTimePreparation() + " min");
-        ((TextView) findViewById(R.id.timeCook)).setText("Cuisson: " + recette.getTimeCooking() + " min");
+        ((TextView) findViewById(R.id.timePrep)).setText(getText(R.string.preparation).toString() + recette.getTimePreparation() + " min");
+        ((TextView) findViewById(R.id.timeCook)).setText(getText(R.string.cuisson).toString() + recette.getTimeCooking() + " min");
+        ((TextView) findViewById(R.id.portion)).setText(recette.getPortion() + " " + getText(R.string.personne).toString());
 
         ImageView icon = (ImageView) findViewById(R.id.iconCook);
         int res = getResources().getIdentifier(recette.getImageLink(), "drawable", getPackageName());
@@ -60,7 +61,7 @@ public class Cook extends AppCompatActivity {
         ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         for(Etape step : recette.getSteps()){
             TextView titleStep = new TextView(this);
-            titleStep.setText("Etape " + step.getNumber());
+            titleStep.setText(getText(R.string.step).toString() + step.getNumber());
             titleStep.setTextSize(20f);
             titleStep.setTypeface(Typeface.DEFAULT_BOLD);
             params.setMargins(0, 20, 0, 0);

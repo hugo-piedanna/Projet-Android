@@ -10,4 +10,138 @@
     <string name="radioEte">Été</string>
     <string name="radioAutomne">Automne</string>
     <string name="radioHiver">Hiver</string>
+    <string name="addAllergy">Nouvelle allergie sauvegardée</string>
+    <string name="removeAllergy">Allergie supprimée</string>
+    <string name="step">Etape: </string>
+    <string name="preparation">Préparation: </string>
+    <string name="cuisson">Cuisson: </string>
+    <string name="personne">personne.s</string>
+
+    <!-- Ingredient -->
+    <string name="ing_PS">pâte sablée</string>
+    <string name="ing_RH">rhubarbe</string>
+    <string name="ing_OE">oeuf</string>
+    <string name="ing_CR">crème</string>
+    <string name="ing_PA">poudre d\'amandes</string>
+    <string name="ing_SP">sucre en poudre</string>
+    <string name="ing_CA">cassonade</string>
+    <string name="ing_PO">poire</string>
+    <string name="ing_PC">pépites de chocolat</string>
+    <string name="ing_BL">boîte de lait non sucré</string>
+    <string name="ing_BR">beurre</string>
+    <string name="ing_FR">farine</string>
+    <string name="ing_TV">thé vert</string>
+    <string name="ing_EF">eau frémissante</string>
+    <string name="ing_OR">orange</string>
+    <string name="ing_SA">sirop d\'agave</string>
+    <string name="ing_CO">courgette</string>
+    <string name="ing_AU">aubergine</string>
+    <string name="ing_PV">poivron vert</string>
+    <string name="ing_PR">poivron rouge</string>
+    <string name="ing_TO">tomate</string>
+    <string name="ing_OI">oignon</string>
+    <string name="ing_AI">ail</string>
+    <string name="ing_EA">"épaules d\'agneau</string>
+    <string name="ing_PP">pignons de pin</string>
+    <string name="ing_RB">raisin sec blond</string>
+    <string name="ing_HO">huilde d\'olive</string>
+    <string name="ing_CP">cuisse de poulet</string>
+    <string name="ing_PT">pomme de terre</string>
+    <string name="ing_CAR">carotte</string>
+    <string name="ing_PN">panais</string>
+    <string name="ing_BV">bouillon de volaille</string>
+    <string name="ing_POI">poireaux</string>
+    <string name="ing_NM">noix de muscade</string>
+    <string name="ing_CRA">céleri-rave</string>
+    <string name="ing_PG">pomme granny</string>
+    <string name="ing_JC">jus de citron</string>
+    <string name="ing_MT">moutarde</string>
+    <string name="ing_FS">filet de saumon</string>
+    <string name="ing_MG">mangue</string>
+    <string name="ing_FP">fruit de la passion</string>
+    <string name="ing_CI">citron vert</string>
+    <string name="ing_CIB">ciboulette</string>
+    <string name="ing_AV">artichaut violet</string>
+    <string name="ing_VB">vin blanc</string>
+
+    <!-- Steps -->
+
+    <string name="st_C1S1">Epluchez et coupez la rhubarbe en tronçons. Mettez-les dans un saladier. Saupoudrez de sucre en poudre et laissez reposer pendant 2 h, en remuant régulièrement.</string>
+    <string name="st_C1S2">Etalez la pâte sablée dans un moule à tarte beurré. Piquez le fond à la fourchette. Placez 30 mn au frais.</string>
+    <string name="st_C1S3">Préchauffez le four à th 6 (180° C).</string>
+    <string name="st_C1S4">Couvrez le fond de pâte de papier sulfurisé et garnissez-le de légumes secs. Enfournez pendant 15 mn.</string>
+    <string name="st_C1S5">Egouttez la rhubarbe. Mélangez l’œuf entier et les jaunes dans un saladier avec la crème liquide, et la cassonade.</string>
+    <string name="st_C1S6">Retirez les légumes secs et le papier cuisson. Saupoudrez le fond de tarte de poudre d’amandes. Ajoutez la préparation à la crème puis couvrez de rhubarbe. Enfournez pendant 25 mn. Retirez du four et laissez refroidir sur une grille.</string>
+
+    <string name="st_C2S1">Eplucher et tailler en morceaux les poires.</string>
+    <string name="st_C2S2">Préchauffer le four à 180°C (th.6).</string>
+    <string name="st_C2S3">Verser le lait concentré dans une casserole, le porter à petites ébullitions.</string>
+    <string name="st_C2S4">Dans une autre casserole, déposer 40 g de beurre, faire fondre à feu doux.</string>
+    <string name="st_C2S5">Dans un saladier, mélanger la farine et le sucre, verser le lait concentré.</string>
+    <string name="st_C2S6">Ajouter les œufs, mélanger et incorporer le beurre fondu.</string>
+    <string name="st_C2S7">Beurrer un plat à four, y répartir les morceaux de poires et les pépites de chocolat, verser la pâte.</string>
+    <string name="st_C2S8">Enfourner 40 à 45 minutes (le temps de cuisson varie de quelques minutes selon les fours).</string>
+    <string name="st_C2S9">Vérifier la cuisson en enfonçant la lame du couteau dans le clafoutis : la lame doit en ressortir bien propre.</string>
+    <string name="st_C2S10">Déguster le clafoutis tiède ou froid.</string>
+
+    <string name="st_C3S1">Faites bouillir de l’eau. Mettez le thé dans un bol, versez l’eau frémissante dessus, couvrez et laissez infuser 5 minutes.</string>
+    <string name="st_C3S2">Pelez 6 oranges à vif, coupez-les en fines tranches et mettez-les dans un saladier.</string>
+    <string name="st_C3S3">Filtrez le thé infusé, dans un autre bol, ajoutez le jus des 3 oranges restantes et le sirop d’agave ou l’édulcorant à la stevia, mélangez bien et versez sur les rondelles d’oranges. Ajoutez une pincée de feuilles de thé vert et réservez au frais jusqu’au moment de servir.</string>
+
+    <string name="st_C4S1">Lavez et détaillez les courgettes, l\'aubergine, le poivron vert et le rouge, en cubes de taille moyenne. Coupez les tomates en quartiers et émincez l\'oignon.</string>
+    <string name="st_C4S2">Dans une poêle, versez un peu d\'huile d\'olive et faites-y revenir les uns après les autres les différents légumes pendant 5 minutes pour qu\'ils colorent. Commencez par les poivrons, puis les aubergines, les courgettes et enfin les oignons et les tomates que vous cuirez ensemble.</string>
+    <string name="st_C4S3">Après avoir fait cuire les légumes, ajoutez-les tous aux tomates et aux oignons, baissez le feu puis mélangez. Ajoutez un beau bouquet garni de thym, de romarin et de laurier, salez, poivrez, puis couvrez pour laisser mijoter 40 minutes en remuant régulièrement.</string>
+    <string name="st_C4S4">À environ 10 minutes du terme de la cuisson, ajoutez les deux belles gousses d\'ail écrasées puis couvrez de nouveau. N\'hésitez pas à goûter et à assaisonner de nouveau selon vos goûts.</string>
+    <string name="st_C4S5">Dégustez avec des grillades ou un barbecue.</string>
+
+    <string name="st_C5S1">Coupez la viande en tout petits dés.</string>
+    <string name="st_C5S2">Pelez et émincez très finement les oignons.</string>
+    <string name="st_C5S3">Faites chauffer l’huile dans une cocotte. Faites-y revenir les oignons avec les dés de viande en remuant. Ajoutez les pignons de pin et les raisins secs. Salez et poivrez. Versez un petit verre d’eau. Couvrez. Faites cuire à feu très doux pendant 15 minutes en remuant régulièrement.</string>
+    <string name="st_C5S4">Préchauffez le four th 7 (210°C).</string>
+    <string name="st_C5S5">Lavez les tomates et coupez les chapeaux. Evidez-les délicatement avec une petite cuillère.</string>
+    <string name="st_C5S6">Posez les coques vides de tomates dans un plat à four huilé. Farcissez-les de la préparation à la viande, arrosez d’un filet d’huile d’olive, salez et poivrez.</string>
+    <string name="st_C5S7">Enfournez et faites cuire 45 minutes.</string>
+    <string name="st_C5S8">Quinze minutes avant la fin de la cuisson, posez les chapeaux des tomates dessus. Poursuivez la cuisson quinze minutes.</string>
+    <string name="st_C5S9">Servez dès la sortie du four.</string>
+
+    <string name="st_C6S1">Préchauffez le four à 200°C (thermostat 6/7). Pelez les pommes de terre, les panais et les carottes et émincez-les. Coupez en deux dans la largeur la tête d’ail.</string>
+    <string name="st_C6S2">Huilez un plat à four et placez-y les légumes. Ajoutez les têtes d’ail. Badigeonnez les cuisses de poulet d’huile et placez-les sur les légumes. Parsemez de thym. Versez le bouillon de légumes dans le fond du plat. Salez et donnez un tour de moulin à poivre.</string>
+    <string name="st_C6S3">Enfournez et faites rôtir 45 minutes. Arrosez le poulet régulièrement du jus de cuisson. Ajoutez un peu d’eau si besoin dans le fond du plat à mi-cuisson. Servez chaud.</string>
+
+    <string name="st_C7S1">Faire bouillir de l\'eau salée dans une casserole. Parer les poireaux afin de ne conserver que le vert tendre et le blanc. Découper les poireaux en grosses rondelles puis plonger celles-ci dans l\'eau bouillante durant 5 minutes. Egoutter puis sécher les poireaux. Hacher ceux-ci.</string>
+    <string name="st_C7S2">Dans un saladier, battre les oeufs. Ajouter la farine, le thym et la muscade puis mélanger. Saler et poivrer. Travailler la pâte à l\'aide d\'une spatule. Ajouter les poireaux hachés puis remuer.</string>
+    <string name="st_C7S3">Faire chauffer de l\'huile dans le fond d\'un wok. A l\'aide d\'une cuillère à soupe, prélever de la pâte et plonger les croquettes dans l\'huile bouillante. Faire dorer chaque croquette avant de les égoutter sur du papier absorbant.</string>
+
+    <string name="st_C8S1">Epluchez et râpez le céleri avec une grosse râpe. Faites-le blanchir 2 minutes dans l’eau bouillante salée. Egouttez et rafraîchissez-le sous l’eau froide. Laissez-le égoutter.</string>
+    <string name="st_C8S2">Pelez et râpez les carottes avec une grosse râpe. Pelez et râpez les pommes avec une grosse râpe. Arrosez les pommes râpées de jus de citron et mélangez.</string>
+    <string name="st_C8S3">Mélangez le jaune d’œuf et la moutarde dans un grand bol. Salez et poivrez. Incorporez l’huile de tournesol en filet en fouettant sans arrêt jusqu’à l’obtention d’une mayonnaise bien ferme.</string>
+    <string name="st_C8S4">Dans un saladier, mélangez le céleri, les carottes et les pommes râpés.  Ajoutez l mayonnaise. Mélangez bien. Rectifiez l’assaisonnement.</string>
+    <string name="st_C8S5">Répartissez dans des petites écuelles et servez aussitôt.</string>
+
+    <string name="st_C9S1">Rincez et épongez le filet de saumon. Retirez les arêtes à la pince si besoin. Détaillez-le en tout petits dés.</string>
+    <string name="st_C9S2">Pelez, dénoyautez et coupez la chair de la mangue en tout petits dés. Lavez, épépinez et coupez la pomme en petits morceaux.</string>
+    <string name="st_C9S3">Ouvrez les fruits de la passion. Récupérez la pulpe à l’aide d’une petite cuillère. Râpez finement le zeste et pressez le jus du citron vert. Rincez, séchez et ciselez la ciboulette.</string>
+    <string name="st_C9S4">Dans un saladier, mélangez le saumon avec la mangue, la pomme, la pulpe de fruits de la passion, le jus de citron vert, la ciboulette, l’huile d’olive, du sel et du poivre.</string>
+    <string name="st_C9S5">Répartissez le tartare dans des bocaux. Parsemez de zestes de citron. Réservez au frais jusqu’au moment de servir.</string>
+
+    <string name="st_C10S1">Coupez les pieds des artichauts. Retirez les feuilles dures de la base et taillez au ciseau le hauts des feuilles restantes.</string>
+    <string name="st_C10S2">Pelez les oignons et les carottes. Taillez-les en rondelles. Emincez le poivron rouge.</string>
+    <string name="st_C10S3">Faites chauffer l’huile dans une sauteuse. Faites-y revenir 2 minutes en remuant les oignons, les carottes et le poivron. Puis baissez le feu et posez par dessus, serrés les uns contre les autres et bien à plat, les artichauts. Salez et poivrez et laissez mijoter 5 minutes.</string>
+    <string name="st_C10S4">Arrosez avec le vin et un verre d’eau, couvrez et laissez cuire 1 h 15.</string>
+    <string name="st_C10S5">Lavez, séchez, effeuillez et ciselez le persil. Ajoutez-le en fin de cuisson dans la sauteuse.</string>
+
+    <!-- Cooks -->
+
+    <string name="C1">Tarte à la rhubarbe</string>
+    <string name="C2">Clafoutis aux poires et chocolat</string>
+    <string name="C3">Salade d’orange au thé vert</string>
+    <string name="C4">Ratatouille</string>
+    <string name="C5">Tomates farcies à l’agneau</string>
+    <string name="C6">Poulet et légumes rôtis à l’ail</string>
+    <string name="C7">Croquettes de poireaux</string>
+    <string name="C8">Rémoulade de pomme verte</string>
+    <string name="C9">Tartare de saumon exotique</string>
+    <string name="C10">Artichauts poivrades à la barigoule</string>
+    <string name="ingrTitle">Ingrédients</string>
+    <string name="searchIng">Rechercher un ingrédient</string>
 </resources>

@@ -44,11 +44,11 @@ public class ListAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflater.inflate(R.layout.itemlist, null);
         TextView name = (TextView) view.findViewById(R.id.nameRecetteList);
-        name.setText(recettes.get(i).getTitle());
+        name.setText(this.recettes.get(i).getTitle());
 
         ImageView icon = (ImageView) view.findViewById(R.id.iconRecetteList);
-        int res = this.context.getResources().getIdentifier(this.recettes.get(i).getImageLink(), "drawable", this.context.getPackageName());
-        icon.setImageDrawable(this.context.getResources().getDrawable(res));
+        int resImage = this.context.getResources().getIdentifier(this.recettes.get(i).getImageLink(), "drawable", this.context.getPackageName());
+        icon.setImageDrawable(this.context.getResources().getDrawable(resImage));
         return view;
     }
 }

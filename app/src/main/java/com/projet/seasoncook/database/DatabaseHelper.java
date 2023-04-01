@@ -9,12 +9,14 @@ import com.projet.seasoncook.models.Seasons;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "SeasonCook.db";
-    private static final int DATABASE_VERSION = 7;
+    private static final int DATABASE_VERSION = 9;
 
-    private String createTable = "CREATE TABLE settings(id INTEGER PRIMARY KEY, season TEXT);";
+    private String createTableSettings = "CREATE TABLE settings(id INTEGER PRIMARY KEY, season TEXT);";
+    private String createTableAllergy = "CREATE TABLE allergy(name TEXT PRIMARY KEY);";
     private String insertInitParam = "INSERT INTO settings VALUES (1, '"+ Seasons.Spring.name() +"');";
 
-    private String deleteTable = "DROP TABLE IF EXISTS settings;";
+    private String deleteTableSettings = "DROP TABLE IF EXISTS settings;";
+    private String deleteTableAllergy = "DROP TABLE IF EXISTS allergy;";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -23,15 +25,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        Log.v("[Helper]", "Création db");
-        db.execSQL(createTable);
+        Log.v("[Helper]", "Create db");
+        db.execSQL(createTableSettings);
+        db.execSQL(createTableAllergy);
         db.execSQL(insertInitParam);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.v("[Helper]", "Upgrade db");
-        db.execSQL(deleteTable);
+        db.execSQL(deleteTableSettings);
+        db.execSQL(deleteTableAllergy);
         onCreate(db);
     }
 

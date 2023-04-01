@@ -3,9 +3,12 @@ package com.projet.seasoncook.models;
 import android.os.Parcelable;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Recette implements Serializable{
 
@@ -66,6 +69,10 @@ public class Recette implements Serializable{
 
     public int getPortion(){
         return this.portion;
+    }
+
+    public List<Ingredient> getListIngredients(){
+        return new ArrayList<>(this.ingredients.keySet());
     }
 
     @Override

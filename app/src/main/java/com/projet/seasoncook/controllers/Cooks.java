@@ -2,6 +2,12 @@ package com.projet.seasoncook.controllers;
 
 import static java.util.stream.Collectors.toCollection;
 
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+import com.projet.seasoncook.database.DatabaseHelper;
 import com.projet.seasoncook.models.CookType;
 import com.projet.seasoncook.models.Etape;
 import com.projet.seasoncook.models.Ingredient;
@@ -21,23 +27,61 @@ public class Cooks {
 
     private static Cooks instance;
     private List<Recette> recettes;
+    private List<Ingredient> allergy;
     private Map<Integer, Ingredient> ingredients;
+    private Context context;
 
-    private Cooks(){
+    private Cooks(Context context){
         this.recettes = new ArrayList<Recette>();
         this.ingredients = new HashMap<Integer, Ingredient>();
+        this.allergy = new ArrayList<>();
+        this.context = context;
         initCooks();
     }
 
-    public static synchronized Cooks getInstance(){
+    public static synchronized Cooks getInstance(Context context){
         if(instance == null){
-            instance = new Cooks();
+            instance = new Cooks(context);
         }
         return instance;
     }
 
     public List<Recette> getCooks(){
-        return recettes;
+        //All ingredient in database
+        this.allergy.clear();
+        DatabaseHelper dbHelper = new DatabaseHelper(this.context);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.query("allergy", new String[] {"name"}, "", new String[] {}, null, null, null);
+        if(cursor.moveToFirst()){
+            do{
+                String name = cursor.getString(cursor.getColumnIndexOrThrow("name"));
+                for(int i = 0; i < this.ingredients.size(); i++){
+                    if(this.ingredients.get(i) != null && this.ingredients.get(i).getName().equals(name)){
+                        this.allergy.add(this.ingredients.get(i));
+                    }
+                }
+            }while (cursor.moveToNext());
+        }
+
+
+        List<Recette> cooks = new ArrayList<>();
+        //toutes les recettes
+        for (Recette recette : this.recettes) {
+            boolean contientAllergene = false;
+            // Tous les incrédients de la rectte
+            for (Ingredient ingredient : recette.getListIngredients()) {
+                //Si l'ingrédient est dans la liste des allergène
+                if (this.allergy.contains(ingredient)) {
+                    contientAllergene = true;
+                    break;
+                }
+            }
+            if (!contientAllergene) {
+                cooks.add(recette);
+            }else{
+            }
+        }
+        return cooks;
     }
 
     public List<Ingredient> getIngredientsFiltre(CharSequence filtre){
@@ -49,10 +93,11 @@ public class Cooks {
     }
 
     public List<Recette> cooksFilter(Seasons seasons, CookType type){
-        return this.recettes.stream().filter(e -> Arrays.asList(e.getSeasons()).contains(seasons)).filter(e -> e.getType().equals(type)).collect(Collectors.toList());
+        return getCooks().stream().filter(e -> Arrays.asList(e.getSeasons()).contains(seasons)).filter(e -> e.getType().equals(type)).collect(Collectors.toList());
     }
 
     private void initCooks(){
+
         this.ingredients.put(1, new Ingredient("pâte sablée", IngredientUnity.Aucune));
         this.ingredients.put(2, new Ingredient("rhubarbe", IngredientUnity.Gramme));
         this.ingredients.put(3, new Ingredient("oeuf", IngredientUnity.Aucune));
@@ -307,6 +352,7 @@ public class Cooks {
             this.recettes.add(new Recette("Artichauts poivrades à la barigoule", steps, ing, 20, 90, "artichauts_poivrade", CookType.starter, new Seasons[] {Seasons.Summer, Seasons.Spring, Seasons.Winter}, 6));
 
         }
+
 
     }
 }

@@ -33,7 +33,7 @@ public class preferences extends AppCompatActivity {
         setContentView(R.layout.activity_preferences);
 
         ListView list = (ListView) findViewById(R.id.listIngredientsPref);
-        ListAdapterIngredients adapter = new ListAdapterIngredients(Cooks.getInstance().getIngredients(), getApplicationContext());
+        ListAdapterIngredients adapter = new ListAdapterIngredients(Cooks.getInstance(getApplicationContext()).getIngredients(), getApplicationContext());
         list.setAdapter(adapter);
 
         EditText search = (EditText) findViewById(R.id.searchBar);
@@ -45,9 +45,9 @@ public class preferences extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                List<Ingredient> ings = Cooks.getInstance().getIngredients();
+                List<Ingredient> ings = Cooks.getInstance(getApplicationContext()).getIngredients();
                 if(charSequence.length() != 0) {
-                    ings = Cooks.getInstance().getIngredientsFiltre(charSequence);
+                    ings = Cooks.getInstance(getApplicationContext()).getIngredientsFiltre(charSequence);
                 }
                 ListAdapterIngredients adapter = new ListAdapterIngredients(ings, getApplicationContext());
                 list.setAdapter(adapter);

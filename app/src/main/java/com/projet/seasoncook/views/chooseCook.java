@@ -31,7 +31,7 @@ public class chooseCook extends AppCompatActivity {
         CookType type = CookType.valueOf(getIntent().getStringExtra("cooktype"));
 
         ListView list = findViewById(R.id.listCook);
-        ListAdapter adapter = new ListAdapter(Cooks.getInstance().cooksFilter(seasons, type), getApplicationContext());
+        ListAdapter adapter = new ListAdapter(Cooks.getInstance(getApplicationContext()).cooksFilter(seasons, type), getApplicationContext());
 
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SeasonCook</string>
+    <string name="app_name" translatable="false">SeasonCook</string>
     <string name="btnEntree">Entrées</string>
     <string name="btnPlat">Plats</string>
     <string name="btnDessert">Desserts</string>
@@ -44,7 +44,7 @@
     <string name="ing_EA">"épaules d\'agneau</string>
     <string name="ing_PP">pignons de pin</string>
     <string name="ing_RB">raisin sec blond</string>
-    <string name="ing_HO">huilde d\'olive</string>
+    <string name="ing_HO">huile d\'olive</string>
     <string name="ing_CP">cuisse de poulet</string>
     <string name="ing_PT">pomme de terre</string>
     <string name="ing_CAR">carotte</string>
